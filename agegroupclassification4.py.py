@@ -57,11 +57,11 @@ print("Making predictions on the test set...")
 test_predictions = ensemble_clf.predict(test_data[numeric_columns + ['sex']])
 
 submission = pd.DataFrame({'id': test_data['id'], 'Age Group': le.inverse_transform(test_predictions)})
-submission.to_csv('submission.csv', index=False)
+submission.to_csv('outputdataset.csv', index=False)
 
-# Optionally, print the best parameters for each classifier
-print("Best parameters for Random Forest:", rf_clf.best_params_)
-print("Best parameters for Gradient Boosting:", gb_clf.best_params_)
-print("Best parameters for SVC:", svc_clf.best_params_)
+# Optional...
+# print("Best parameters for Random Forest:", rf_clf.best_params_)
+# print("Best parameters for Gradient Boosting:", gb_clf.best_params_)
+# print("Best parameters for SVC:", svc_clf.best_params_)
 
-print("Submission file created: submission.csv")
+print("Submission file created: outputdataset.csv")
