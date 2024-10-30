@@ -1,3 +1,5 @@
+#dataset link : https://media.geeksforgeeks.org/wp-content/uploads/20240904104950/creditcard.csv
+
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
